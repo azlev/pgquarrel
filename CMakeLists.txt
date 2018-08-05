@@ -96,6 +96,7 @@ else()
 endif()
 message(${LIBS})
 
+
 include_directories(mini)
 
 set(LIBS ${LIBS} mini)
@@ -159,12 +160,12 @@ add_custom_target("style" COMMAND
 # $ ./run-test.sh init
 # point your browser to pgquarrel/coverage/index.html
 
-set(CPACK_PACKAGE_NAME "pgquarrel")
 set(CPACK_PACKAGE_DESCRIPTION_SUMMARY "pgquarrel is a program that compares PostgreSQL database schemas (DDL).")
 set(CPACK_PACKAGE_VERSION_MAJOR  "0")
 set(CPACK_PACKAGE_VERSION_MINOR  "4")
 set(CPACK_PACKAGE_VERSION_PATCH  "0")
 
-set(CPACK_GENERATOR "TGZ" "TBZ2")
-set(CPACK_SOURCE_GENERATOR "TGZ" "TBZ2")
+set(CPACK_GENERATOR "TBZ2")
+set(CPACK_SOURCE_GENERATOR "TBZ2")
 include(CPack)
+

@@ -1,3 +1,5 @@
+include(GNUInstallDirs)
+
 add_library(mini SHARED
 	mini-file.c
 	mini-file.h
@@ -9,4 +11,4 @@ add_library(mini SHARED
 	mini-strip.h
 )
 
-install(TARGETS mini DESTINATION lib)
+install(TARGETS mini LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR})
